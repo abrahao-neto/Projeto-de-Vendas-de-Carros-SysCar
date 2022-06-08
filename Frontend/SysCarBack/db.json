@@ -1,0 +1,184 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Preta",
+      "price": 5.89
+    },
+    {
+      "id": 2,
+      "name": "Notebook Mac Pro",
+      "price": 12000.89
+    },
+    {
+      "id": 3,
+      "name": "Sansung S20+ Ultra",
+      "price": "7520.89"
+    },
+    {
+      "name": "Lapis Preto Básico",
+      "price": "1.50",
+      "id": 4
+    },
+    {
+      "name": "Tinta",
+      "price": "20.00",
+      "id": 5
+    }
+  ],
+  "carros": [
+    {
+      "id": "1",
+      "NomeCarro": "Hillux",
+      "CoresCarroId": "1",
+      "TiposCarroId": "4"
+    },
+    {
+      "id": "2",
+      "NomeCarro": "Corolla",
+      "CoresCarroId": "2",
+      "TiposCarroId": "3"
+    },
+    {
+      "id": "3",
+      "NomeCarro": "Hb20",
+      "CoresCarroId": "3",
+      "TiposCarroId": "2"
+    },
+    {
+      "id": "4",
+      "NomeCarro": "2008",
+      "CoresCarroId": "4",
+      "TiposCarroId": "1"
+    }
+  ],
+  "cores": [
+    {
+      "id": "1",
+      "Descricao": "Branco"
+    },
+    {
+      "id": "2",
+      "Descricao": "Preto"
+    },
+    {
+      "id": "3",
+      "Descricao": "Azul"
+    },
+    {
+      "id": "4",
+      "Descricao": "Vermelho"
+    }
+  ],
+  "tipos-carro": [
+    {
+      "id": "1",
+      "Descricao": "Suv"
+    },
+    {
+      "id": "2",
+      "Descricao": "Hacth"
+    },
+    {
+      "id": "3",
+      "Descricao": "Sedan"
+    },
+    {
+      "id": "4",
+      "Descricao": "Pick-up"
+    }
+  ],
+  "vendas-carro": [
+    {
+      "id": "1",
+      "DataVendaCarro": "12/12/2019",
+      "ValorVendaCarro": "20000.12",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "1"
+    },
+    {
+      "id": "2",
+      "DataVendaCarro": "13/03/2018",
+      "ValorVendaCarro": "30000.78",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "2"
+    },
+    {
+      "id": "3",
+      "DataVendaCarro": "29/10/2020",
+      "ValorVendaCarro": "34000.00",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "4"
+    },
+    {
+      "id": "4",
+      "DataVendaCarro": "20/11/2017",
+      "ValorVendaCarro": "29000.00",
+      "AtivoVendaCarro": "não",
+      "CarrosId": "4"
+    },
+    {
+      "id": "5",
+      "DataVendaCarro": "30/10/2021",
+      "ValorVendaCarro": "50000.00",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "2"
+    },
+    {
+      "id": "6",
+      "DataVendaCarro": "12/04/2018",
+      "ValorVendaCarro": "33099.01",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "3"
+    },
+    {
+      "id": "7",
+      "DataVendaCarro": "11/12/2010",
+      "ValorVendaCarro": "40928.21",
+      "AtivoVendaCarro": "não",
+      "CarrosId": "4"
+    },
+    {
+      "id": "8",
+      "DataVendaCarro": "21/17/2017",
+      "ValorVendaCarro": "30889.00",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "2"
+    },
+    {
+      "id": "9",
+      "DataVendaCarro": "29/12/2020",
+      "ValorVendaCarro": "45000.00",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "2"
+    },
+    {
+      "id": "10",
+      "DataVendaCarro": "28/09/2015",
+      "ValorVendaCarro": "46000.00",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "3"
+    },
+    {
+      "id": "11",
+      "DataVendaCarro": "29/06/2019",
+      "ValorVendaCarro": "63000.09",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "3"
+    },
+    {
+      "id": "12",
+      "DataVendaCarro": "21/09/2019",
+      "ValorVendaCarro": "50339.03",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "2"
+    },
+    {
+      "id": "13",
+      "DataVendaCarro": "21/01/2019",
+      "ValorVendaCarro": "100298.00",
+      "AtivoVendaCarro": "sim",
+      "CarrosId": "1"
+    }
+  ]
+}

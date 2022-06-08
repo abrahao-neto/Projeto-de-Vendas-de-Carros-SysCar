@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Nova Cor</h1>
+<form>
+    <h4>Cor</h4>
+    <mat-form-field class="input">
+        <input matInput placeholder="Digite a Cor" [(ngModel)]="data.Descricao" name="Cor">
+    </mat-form-field>
+
+</form>
+<div mat-dialog-actions class="button">
+    <button mat-raised-button mat-button [mat-dialog-close]="data.Descricao" color="primary"
+        cdkFocusInitial>Salvar</button>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+</div>

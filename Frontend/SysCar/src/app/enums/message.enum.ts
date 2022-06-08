@@ -1,0 +1,31 @@
+export class MessageEnum {
+  static Options = {
+    'Insert': 'Registration successfully',
+    'Update': 'Update successfully',
+    'Delete': 'Delete successfully',
+    'Approval': 'Approved successfully',
+    'Reject': 'Rejected successfully',
+    'Send': 'Sent successfully',
+    'Processing': 'Processing...',
+    'ReadData': 'Read data, please wait...',
+    'Active': 'ACTIVE',
+    'Inactive': 'INACTIVE',
+    'Invalid': 'Select a item of list',
+    'NoItemSel': 'Select at least one item of cells from the list',
+    'ItemExist': 'There is already an item registered with this information.',
+    'CellExist': 'There is already an item Cell with this information.',
+    'ErroFatalReturnAPIBUS': 'An unexpected processing failure has occurred. Contact support for more information!',
+    'ErroComunicationAPIBUS': 'An unexpected communication failure with the server. Contact support for more information!',
+    'LoadingDataGrid': 'Loading data, waiting please...',
+    'Erro400': 'Invalid request',
+    'Erro401': 'Not authorized',
+    'Erro403': 'Forbidden',
+    'Erro405': 'Method not alowed',
+    'Erro429': 'Excess request',
+    'Erro500': 'Internal Server Error',
+    'Erro502': 'Bad Gateway',
+    'Erro503': 'Service Unavailable',
+    'Erro504': 'Gateway Time-Out',
+    'Erro505': 'HTTP Version not supported'
+  }
+}

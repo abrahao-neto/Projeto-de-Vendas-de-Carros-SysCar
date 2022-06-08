@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Novo Carro</h1>
+<form>
+    <mat-form-field class="input">
+        <input matInput placeholder="Nome do Carro" [(ngModel)]="data.NomeCarro" [ngModelOptions]="{standalone: true}"
+            name="Nome">
+    </mat-form-field>
+    <h4>Cores</h4>
+    <mat-form-field appearance="fill" class="input">
+        <mat-label class="control-label">Selecione uma Cor</mat-label>
+        <mat-select [(ngModel)]="model" [ngModelOptions]="{standalone: true}" name="Cor">
+            <mat-option *ngFor="let cor of cores" [value]="cor">
+                {{cor.Descricao}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <h4>Categoria</h4>
+    <mat-form-field appearance="fill" class="input">
+        <mat-label class="control-label">Selecione uma Categoria</mat-label>
+        <mat-select [(ngModel)]="model" [ngModelOptions]="{standalone: true}" name="Caregoria">
+            <mat-option *ngFor="let tipoCarro of TiposCarro" [value]="tipoCarro">
+                {{tipoCarro.Descricao}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+</form>
+<div mat-dialog-actions class="button">
+    <button mat-raised-button mat-button [mat-dialog-close]="data.NomeCarro" color="primary"
+        cdkFocusInitial>Salvar</button>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+</div>
