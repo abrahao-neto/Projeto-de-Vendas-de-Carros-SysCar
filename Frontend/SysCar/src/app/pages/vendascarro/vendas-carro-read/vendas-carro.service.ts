@@ -24,12 +24,12 @@ export class VendasCarroService {
         });
     }
 
-    //   create(product: Product): Observable<Product> {
-    //     return this.http.post<Product>(this.baseUrl, product).pipe(
-    //       map((obj) => obj),
-    //       catchError((e) => this.errorHandler(e))
-    //     );
-    //   }
+    create(vendasCarroModel: VendasCarroModel): Observable<VendasCarroModel> {
+        return this.http.post<VendasCarroModel>(this.baseUrl, vendasCarroModel).pipe(
+            map((obj) => obj),
+            catchError((e) => this.errorHandler(e))
+        );
+    }
 
     read(): Observable<[]> {
         return this.http.get<VendasCarroModel[]>(this.baseUrl).pipe(
@@ -38,21 +38,21 @@ export class VendasCarroService {
         );
     }
 
-    //   readById(id: number): Observable<Product> {
-    //     const url = `${this.baseUrl}/${id}`;
-    //     return this.http.get<Product>(url).pipe(
-    //       map((obj) => obj),
-    //       catchError((e) => this.errorHandler(e))
-    //     );
-    //   }
+    readById(id: number): Observable<VendasCarroModel> {
+        const url = `${this.baseUrl}/${id}`;
+        return this.http.get<VendasCarroModel>(url).pipe(
+            map((obj) => obj),
+            catchError((e) => this.errorHandler(e))
+        );
+    }
 
-    //   update(product: Product): Observable<Product> {
-    //     const url = `${this.baseUrl}/${product.id}`;
-    //     return this.http.put<Product>(url, product).pipe(
-    //       map((obj) => obj),
-    //       catchError((e) => this.errorHandler(e))
-    //     );
-    //   }
+    update(vendasCarroModel: VendasCarroModel): Observable<VendasCarroModel> {
+        const url = `${this.baseUrl}/${vendasCarroModel.id}`;
+        return this.http.put<VendasCarroModel>(url, vendasCarroModel).pipe(
+            map((obj) => obj),
+            catchError((e) => this.errorHandler(e))
+        );
+    }
 
     //   delete(id: number): Observable<Product> {
     //     const url = `${this.baseUrl}/${id}`;

@@ -28,3 +28,8 @@
     font-size: 40px;
     color: rgb(168, 8, 8);
 }
+
+.list {
+    background-color: blue;
+    width: 200px;
+}

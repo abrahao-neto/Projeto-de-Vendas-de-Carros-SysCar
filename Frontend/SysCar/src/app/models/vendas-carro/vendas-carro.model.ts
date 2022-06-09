@@ -1,6 +1,12 @@
 import { BaseModel } from "../base.model";
 
 export class VendasCarroModel extends BaseModel {
+
+    DataVendaCarro: Date
+    ValorVendaCarro: number
+    AtivoVendaCarro: boolean
+    CarrosId: string
+
     constructor(
         DataVendaCarro: Date,
         ValorVendaCarro: number,

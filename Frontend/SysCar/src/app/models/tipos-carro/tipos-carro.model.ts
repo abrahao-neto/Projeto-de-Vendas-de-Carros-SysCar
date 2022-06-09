@@ -1,6 +1,9 @@
 import { BaseModel } from "../base.model";
 
 export class TiposCarroModel extends BaseModel {
+
+    Descricao: string;
+
     constructor(
         Descricao: string
     ) { super(); }

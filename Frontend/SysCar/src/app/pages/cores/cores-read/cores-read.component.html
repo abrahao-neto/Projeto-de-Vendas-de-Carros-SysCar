@@ -17,12 +17,12 @@
         <ng-container matColumnDef="action">
             <th mat-header-cell *matHeaderCellDef>Ações</th>
             <td mat-cell *matCellDef="let row">
-                <a routerLink="/cores/update/{{ row.id }}" class="edit">
+                <a routerLink="/cores/update/{{ row.id }}" class="edit" (click)="openDialogUpdate()">
                     <i class="material-icons">
                         edit
                     </i>
                 </a>
-                <a routerLink="/cores/delete/{{ row.id }}" class="delete">
+                <a routerLink="/cores/delete/{{ row.id }}" class="delete" (click)="openDialogDelete()">
                     <i class="material-icons">
                         delete
                     </i>

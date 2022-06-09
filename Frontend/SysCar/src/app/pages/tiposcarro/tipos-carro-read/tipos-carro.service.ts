@@ -22,12 +22,12 @@ export class TiposCarroService {
         });
     }
 
-    //   create(product: Product): Observable<Product> {
-    //     return this.http.post<Product>(this.baseUrl, product).pipe(
-    //       map((obj) => obj),
-    //       catchError((e) => this.errorHandler(e))
-    //     );
-    //   }
+    create(tiposCarroModel: TiposCarroModel): Observable<TiposCarroModel> {
+        return this.http.post<TiposCarroModel>(this.baseUrl, tiposCarroModel).pipe(
+            map((obj) => obj),
+            catchError((e) => this.errorHandler(e))
+        );
+    }
 
     read(): Observable<[]> {
         return this.http.get<TiposCarroModel[]>(this.baseUrl).pipe(
@@ -36,21 +36,21 @@ export class TiposCarroService {
         );
     }
 
-    //   readById(id: number): Observable<Product> {
-    //     const url = `${this.baseUrl}/${id}`;
-    //     return this.http.get<Product>(url).pipe(
-    //       map((obj) => obj),
-    //       catchError((e) => this.errorHandler(e))
-    //     );
-    //   }
+    readById(id: number): Observable<TiposCarroModel> {
+        const url = `${this.baseUrl}/${id}`;
+        return this.http.get<TiposCarroModel>(url).pipe(
+            map((obj) => obj),
+            catchError((e) => this.errorHandler(e))
+        );
+    }
 
-    //   update(product: Product): Observable<Product> {
-    //     const url = `${this.baseUrl}/${product.id}`;
-    //     return this.http.put<Product>(url, product).pipe(
-    //       map((obj) => obj),
-    //       catchError((e) => this.errorHandler(e))
-    //     );
-    //   }
+    update(tiposCarroModel: TiposCarroModel): Observable<TiposCarroModel> {
+        const url = `${this.baseUrl}/${tiposCarroModel.id}`;
+        return this.http.put<TiposCarroModel>(url, tiposCarroModel).pipe(
+            map((obj) => obj),
+            catchError((e) => this.errorHandler(e))
+        );
+    }
 
     //   delete(id: number): Observable<Product> {
     //     const url = `${this.baseUrl}/${id}`;

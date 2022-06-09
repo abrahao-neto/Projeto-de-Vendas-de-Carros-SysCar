@@ -1,1 +1,11 @@
-<p>cores-dialog-update works!</p>
+<h1 mat-dialog-title>Editar Cor</h1>
+<form>
+    <h4>Cores</h4>
+    <mat-form-field class="input">
+        <input matInput placeholder="Nome da Cor" [(ngModel)]="data.Descricao" name="Cor">
+    </mat-form-field>
+</form>
+<div mat-dialog-actions class="button">
+    <button mat-raised-button mat-button (click)="updateCores()" color="primary" cdkFocusInitial>Salvar</button>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+</div>

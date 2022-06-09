@@ -38,21 +38,21 @@ export class CoresService {
         );
     }
 
-    //   readById(id: number): Observable<Product> {
-    //     const url = `${this.baseUrl}/${id}`;
-    //     return this.http.get<Product>(url).pipe(
-    //       map((obj) => obj),
-    //       catchError((e) => this.errorHandler(e))
-    //     );
-    //   }
+    readById(id: number): Observable<CoresModel> {
+        const url = `${this.baseUrl}/${id}`;
+        return this.http.get<CoresModel>(url).pipe(
+            map((obj) => obj),
+            catchError((e) => this.errorHandler(e))
+        );
+    }
 
-    //   update(product: Product): Observable<Product> {
-    //     const url = `${this.baseUrl}/${product.id}`;
-    //     return this.http.put<Product>(url, product).pipe(
-    //       map((obj) => obj),
-    //       catchError((e) => this.errorHandler(e))
-    //     );
-    //   }
+    update(coresModel: CoresModel): Observable<CoresModel> {
+        const url = `${this.baseUrl}/${coresModel.id}`;
+        return this.http.put<CoresModel>(url, coresModel).pipe(
+            map((obj) => obj),
+            catchError((e) => this.errorHandler(e))
+        );
+    }
 
     //   delete(id: number): Observable<Product> {
     //     const url = `${this.baseUrl}/${id}`;

@@ -1,1 +1,13 @@
-<p>tiposcarro-dialog-create works!</p>
+<h1 mat-dialog-title class="title">Nova Categoria</h1>
+<form>
+    <h4>Categoria</h4>
+    <mat-form-field class="input">
+        <input matInput placeholder="Digite a Categoria" [(ngModel)]="data.Descricao" name="Categoria">
+    </mat-form-field>
+
+</form>
+<div mat-dialog-actions class="button">
+    <button mat-raised-button mat-button [mat-dialog-close]="data.Descricao" color="primary"
+        cdkFocusInitial>Salvar</button>
+    <button mat-button (click)="onNoClick()">Cancelar</button>
+</div>
