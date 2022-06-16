@@ -15,12 +15,14 @@ import { CarrosService } from '../carros-read/carros.service';
 })
 export class CarrosDialogCreateComponent {
 
+  carros: CarrosModel;
 
   @Input() model;
   cores: CoresModel[] = [];
   TiposCarro: TiposCarroModel[] = [];
   coresService: CoresService;
   tiposCarroService: TiposCarroService;
+
 
   constructor(
     public dialogRef: MatDialogRef<CarrosDialogCreateComponent>,
@@ -29,6 +31,7 @@ export class CarrosDialogCreateComponent {
     public carrosServices: CarrosService,
     public router: Router) {
 
+    this.carros = data;
     coresService.read()
       .subscribe(cores => {
         this.cores = cores;
@@ -40,10 +43,13 @@ export class CarrosDialogCreateComponent {
       }, error => console.log(error));
   }
 
+  ngOnInit(): void {
+
+  }
 
   createCarro(): void {
-    this.carrosServices.create(this.data).subscribe(() => {
-      this.carrosServices.showMessage('Produto criado!')
+    this.carrosServices.create(this.carros).subscribe(() => {
+      this.carrosServices.showMessage('Cadastro criado com sucesso!')
       this.router.navigate(['/carros'])
     })
   }

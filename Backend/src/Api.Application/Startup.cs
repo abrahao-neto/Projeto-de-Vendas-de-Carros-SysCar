@@ -95,7 +95,7 @@ namespace application
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "PROJETO DE VENDAS DE CARROS",
+                    Title = "SysCar - PROJETO DE VENDAS DE CARROS",
                     Description = "Arquitetura DDD - Atualizado em 19/05/2022",
                     TermsOfService = new Uri("https://github.com/abrahao-neto"),
                     Contact = new OpenApiContact

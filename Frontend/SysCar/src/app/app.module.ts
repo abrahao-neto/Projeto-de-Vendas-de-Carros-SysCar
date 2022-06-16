@@ -34,7 +34,11 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 import { RedDirective } from './directives/red.directive';
+import { MatRadioModule } from '@angular/material/radio';
+
 
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -127,7 +131,11 @@ registerLocaleData(localePt);
     MatDatepickerModule,
     MatNativeDateModule,
     MatMenuModule,
-    MatIconModule
+    MatIconModule,
+    MatSlideToggleModule,
+    MatCheckboxModule,
+    MatRadioModule
+
 
 
   ],

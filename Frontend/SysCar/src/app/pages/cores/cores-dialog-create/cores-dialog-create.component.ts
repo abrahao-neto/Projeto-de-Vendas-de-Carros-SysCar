@@ -4,12 +4,14 @@ import { Router } from '@angular/router';
 import { CoresModel } from 'src/app/models/cores/cores.model';
 import { CoresService } from '../cores-read/cores.service';
 
+
 @Component({
   selector: 'app-cores-dialog-create',
   templateUrl: './cores-dialog-create.component.html',
   styleUrls: ['./cores-dialog-create.component.css']
 })
 export class CoresDialogCreateComponent {
+
 
   @Input() model;
 

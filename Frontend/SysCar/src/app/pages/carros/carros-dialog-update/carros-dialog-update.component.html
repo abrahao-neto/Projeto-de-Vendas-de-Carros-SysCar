@@ -1,29 +1,26 @@
-<h1 mat-dialog-title class="title">Editar Carro</h1>
+<h1 mat-dialog-title>Editar carro</h1>
 <form>
     <mat-form-field class="input">
-        <input matInput placeholder="Nome do Carro" [(ngModel)]="data.NomeCarro" name="Nome">
+        <input matInput placeholder="Descrição*" [(ngModel)]="data.NomeCarro" name="Descrição">
     </mat-form-field>
-    <h4>Cores</h4>
     <mat-form-field appearance="fill" class="input">
-        <mat-label class="control-label">Selecione uma Cor</mat-label>
-        <mat-select [(ngModel)]="model" name="Cor">
-            <mat-option *ngFor="let cor of cores" [value]="cor">
-                {{cor.Descricao}}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
-    <h4>Categoria</h4>
-    <mat-form-field appearance="fill" class="input">
-        <mat-label class="control-label">Selecione uma Categoria</mat-label>
+        <mat-label class="control-label">Categoria*</mat-label>
         <mat-select [(ngModel)]="model" name="Categoria">
             <mat-option *ngFor="let tipoCarro of TiposCarro" [value]="tipoCarro">
                 {{tipoCarro.Descricao}}
             </mat-option>
         </mat-select>
     </mat-form-field>
-
+    <mat-form-field appearance="fill" class="input">
+        <mat-label class="control-label">Cor*</mat-label>
+        <mat-select [(ngModel)]="model" name="Cor">
+            <mat-option *ngFor="let cor of cores" [value]="cor">
+                {{cor.Descricao}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
 </form>
 <div mat-dialog-actions class="button">
-    <button mat-raised-button mat-button (click)="updateCarros()" color="primary" cdkFocusInitial>Salvar</button>
     <button mat-button (click)="onNoClick()">Cancelar</button>
+    <button mat-raised-button mat-button (click)="updateCarros()" color="primary" cdkFocusInitial>Salvar</button>
 </div>

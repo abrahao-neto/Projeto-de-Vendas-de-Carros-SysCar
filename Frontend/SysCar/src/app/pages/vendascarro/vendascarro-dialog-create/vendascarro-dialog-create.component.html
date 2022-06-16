@@ -1,41 +1,36 @@
-<h1 mat-dialog-title class="title">Novo Carro</h1>
-<form>
-    <h4>Data</h4>
+<h1 mat-dialog-title>Nova venda</h1>
+<br>
+<mat-form-field appearance="fill" class="input">
+    <mat-label>Data*</mat-label>
+    <input matInput [matDatepicker]="picker">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<div class="container">
     <mat-form-field appearance="fill" class="input">
-        <mat-label>Selecione a data da venda</mat-label>
-        <input matInput [matDatepicker]="picker">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field>
-    <div class="container">
-        <h4>Valor</h4>
-        <mat-form-field appearance="fill" class="input" floatLabel="always">
-            <mat-label>Valor da venda</mat-label>
-            <input matInput type="number" class="right-align" placeholder="0.00">
-            <span matPrefix>R$&nbsp;</span>
-        </mat-form-field>
-    </div>
-    <h4>Ativo</h4>
-    <mat-form-field appearance="fill" class="input">
-        <mat-label>Ativo da Venda</mat-label>
-        <mat-select>
-            <mat-option value="one">Sim</mat-option>
-            <mat-option value="two">Não</mat-option>
-        </mat-select>
-    </mat-form-field>
-    <h4>Carro</h4>
-    <mat-form-field appearance="fill" class="input">
-        <mat-label class="control-label">Selecione um carro</mat-label>
+        <mat-label class="control-label">Carro*</mat-label>
         <mat-select [(ngModel)]="model" [ngModelOptions]="{standalone: true}" name="Nome do Carro">
             <mat-option *ngFor="let carro of carros" [value]="carros">
                 {{carro.NomeCarro}}
             </mat-option>
         </mat-select>
     </mat-form-field>
-
-</form>
+</div>
+<div class="container">
+    <mat-form-field appearance="fill" class="input">
+        <mat-label class="control-label">Valor*</mat-label>
+        <input matInput class="left-align" placeholder="R$ 0.00">
+    </mat-form-field>
+</div>
+<br>
+<div>
+    <mat-label class="float-left">Status*</mat-label>
+    <mat-slide-toggle [(ngModel)]="isChecked" [ngModelOptions]="{standalone: true}" color="primary"
+        class="margin-left-15">
+    </mat-slide-toggle>
+</div>
 <div mat-dialog-actions class="button">
+    <button mat-button (click)="onNoClick()">Cancelar</button>
     <button mat-raised-button mat-button [mat-dialog-close]="carro.NomeCarro" color="primary"
         cdkFocusInitial>Salvar</button>
-    <button mat-button (click)="onNoClick()">Cancelar</button>
 </div>

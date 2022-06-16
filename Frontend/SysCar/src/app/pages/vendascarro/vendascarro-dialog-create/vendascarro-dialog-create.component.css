@@ -26,14 +26,14 @@ input.right-align {
 
 }
 
-.title {
-    color: blue;
-    text-align: center;
-
+.float-left {
+    float: left;
 }
 
-.title {
-    color: blue;
-    text-align: center;
+.margin-left-15 {
+    margin-left: 15px;
+}
 
+.left-align {
+    text-align: left;
 }

@@ -24,10 +24,6 @@ export class TiposCarroViewComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  navigateToTiposCarroCreate(): void {
-    this.router.navigate(['/tipos-carro/create'])
-  }
-
   openDialog(): void {
     const dialogRef = this.dialog.open(TiposcarroDialogCreateComponent, {
       width: '500px', //425px

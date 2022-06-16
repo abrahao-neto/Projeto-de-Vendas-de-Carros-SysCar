@@ -1,11 +1,10 @@
-<h1 mat-dialog-title class="title">Editar Categoria</h1>
+<h1 mat-dialog-title>Editar categoria</h1>
 <form>
-    <h4>Cores</h4>
     <mat-form-field class="input">
-        <input matInput placeholder="Nome da Categoria" [(ngModel)]="data.Descricao" name="Categoria">
+        <input matInput placeholder="Descrição*" [(ngModel)]="data.Descricao" name="Descrição">
     </mat-form-field>
 </form>
 <div mat-dialog-actions class="button">
-    <button mat-raised-button mat-button (click)="updateTiposCarro()" color="primary" cdkFocusInitial>Salvar</button>
     <button mat-button (click)="onNoClick()">Cancelar</button>
+    <button mat-raised-button mat-button (click)="updateTiposCarro()" color="primary" cdkFocusInitial>Salvar</button>
 </div>
